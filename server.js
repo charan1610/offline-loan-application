@@ -21,7 +21,7 @@ var appconfig = require('./Configs/portconfigs');
 //  importsconfig_db
 var DBconfig = require('./Configs/dbconfig');
 
-// expree application
+// express application
 var app = express();
 
 // body-parser application.json()

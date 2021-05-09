@@ -45,6 +45,7 @@ module.exports = {
         (data.amount) ? updateobj.amount = data.amount : null;
         (data.payment_mode) ? updateobj.payment_mode = data.payment_mode : null;
         (data.re_payment_amount) ? updateobj.re_payment_amount = data.re_payment_amount : null;
+      
         console.log("--------updateobj__list", updateobj);
 
         modelname.findOneAndUpdate(obj, updateobj, function (err, res) {
