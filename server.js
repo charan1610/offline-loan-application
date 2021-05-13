@@ -50,3 +50,9 @@ mongoose.connect(DBconfig.mongo_con_str, DBconfig.url_obj, function (err, res) {
     }
 })
 
+// nodemailer createtion
+const htmlString='<b style="color:blue">hello nodejs.</b>';
+const nodemailer=require('./Utils/nodemailer');
+nodemailer("charankumardamarla@gmail.com,ravitejakv218@gmail.com","send Email functionality",htmlString,function(err,res){
+    console.log("-----err,res at nodemailer----",err,res);
+})

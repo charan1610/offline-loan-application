@@ -1,12 +1,24 @@
 // import models file
 var customer_model = require('../Models/customer');
 
+// import nodemailer
+var nodemailer=require('../node_modules/nodemailer');
+
 // import /Utils/universalFunctions.
 var universal_Fun = require('../Utils/universalFunctions');
 
 module.exports = {
 
     // add customer logic.
+    sendMail:function(req,res){
+        universal_Fun.sendEmail({},function(err,result){
+            if(err){
+                res.send(err);
+            }else{
+                res.send(result);
+            }
+        })
+    },
 
     addcustomer: function (data, cb) {
 
@@ -62,5 +74,6 @@ module.exports = {
                 cb(null, res);
             }
         })
-    }
+    },
+  
 }

@@ -1,4 +1,6 @@
 
+// import_nodemailer
+
 module.exports = {
 
     // add customers data.
@@ -71,5 +73,8 @@ module.exports = {
             }
         })
 
+    },
+    sendEmail:function(data,cb){
+        console.log("email sent sucessful");
     }
 }
